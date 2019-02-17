@@ -1,6 +1,8 @@
 Host cocoon
 	HostName cocoon.axcella.net
 	Port 2202
+	ServerAliveInterval 29
+	ServerAliveCountMax 3
 Host mail
 	HostName granpulse.axcella.net
 	Port 2201
