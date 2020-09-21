@@ -16,6 +16,10 @@ Plugin 'gmarik/Vundle.vim'
 " Add all your plugins here (note older versions of Vundle used Bundle instead of Plugin)
 Plugin 'junegunn/vim-easy-align.git'
 
+" File Browsing
+Plugin 'scrooloose/nerdtree'
+let NERDTreeIgnore=['\.pyc$', '\~$']   "ignore files in NERDTree
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -39,12 +43,30 @@ let ruby_space_errors = 1
 set nu ts=4 autoindent bg=dark
 colorscheme desert
 
+if has('autocmd')
+  " Python PEP-8
+  au BufNewFile,BufRead *.py
+       set tabstop=4
+       set softtabstop=4
+       set shiftwidth=4
+       set textwidth=79
+       set expandtab
+       set autoindent
+       set fileformat=unix
+
+  "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h match BadWhitespace /\s\+$/
+endif
+
+
 " Switch and maximize split windows in one keystroke
 "
 map <C-H> <C-W>h<C-W><BAR>
 map <C-L> <C-W>l<C-W><BAR>
 map <C-J> <C-W>j<C-W>_
 map <C-K> <C-W>k<C-W>_
+
+" Open NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
