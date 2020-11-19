@@ -3,6 +3,22 @@ Host cocoon
 	Port 2202
 	ServerAliveInterval 29
 	ServerAliveCountMax 3
+
 Host mail
 	HostName granpulse.axcella.net
 	Port 2201
+	ServerAliveInterval 29
+	ServerAliveCountMax 3
+
+Host granpulse
+	HostName granpulse.axcella.net
+	ServerAliveInterval 29
+	ServerAliveCountMax 3
+
+Host prefect
+	HostName prefect.evergreen.laika.com
+	User navgerinos
+
+Host aerostar
+	HostName aerostar.evergreen.laika.com
+	User navgerinos
