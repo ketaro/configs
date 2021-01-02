@@ -45,7 +45,7 @@ colorscheme desert
 
 if has('autocmd')
   " Python PEP-8
-  au BufNewFile,BufRead *.py
+  au BufNewFile,BufRead *.py silent!
        set tabstop=4
        set softtabstop=4
        set shiftwidth=4
